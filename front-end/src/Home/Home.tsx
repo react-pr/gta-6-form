@@ -23,7 +23,7 @@ export const Home = () => {
 	})
 	const [isSuccess, setIsSuccess] = useState<boolean>(false)
 	const formSubmit: SubmitHandler<IFormState> = async data => {
-		const response = await UserService.pushOne(data)
+		const response: number = await UserService.pushOne(data)
 		if (response === 200) setIsSuccess(true)
 		reset()
 	}

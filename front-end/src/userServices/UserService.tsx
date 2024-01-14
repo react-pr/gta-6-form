@@ -7,14 +7,13 @@ interface IData {
 
 export const UserService = {
 	async getAll(): Promise<IData[]> {
-		const response = await axios.get<IData[]>('http://localhost:8000/users/')
+		const getRequest: string = process.env.REACT_APP_GET as string
+		const response = await axios.get<IData[]>(getRequest)
 		return response.data
 	},
 	async pushOne(data: IData): Promise<number> {
-		const response = await axios.post<IData>(
-			'http://localhost:8000/new-user/',
-			data
-		)
+		const postRequest: string = process.env.REACT_APP_POST as string
+		const response = await axios.post<IData>(postRequest, data)
 		return response.status
 	},
 }

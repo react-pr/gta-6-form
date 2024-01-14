@@ -2,7 +2,7 @@
 DB configuration
 """
 
-from pymongo import MongoClient
+from pymongo.mongo_client import MongoClient
 from dotenv import load_dotenv
 import os
 

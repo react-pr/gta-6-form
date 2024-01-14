@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	background-image: url('../public/bg.png');
+	min-height: 100vh;
+	min-width: 320px;
+	margin: 0;
+	display: flex;
+	place-items: center;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.succes {
+	animation: fade 0.7s;
+}
+
+.form {
+	@apply w-max p-3 absolute left-5 top-5;
+	animation: slideIn 1s linear;
+}
+
+input {
+	@apply bg-gray-800 text-white px-[10px] py-[5px] active:outline-none focus:outline-none focus:border-[2px] focus:border-[#fff] rounded-md block w-full transition-all ease-in-out my-[5px] border-transparent;
+}
+
+@keyframes fade {
+	from {
+		@apply opacity-[0];
+	}
+	to {
+		@apply opacity-[1];
+	}
+}
+
+@keyframes slideIn {
+	from {
+		@apply translate-x-[-110%] opacity-[0];
+	}
+	to {
+		@apply translate-x-[0%] opacity-[1];
+	}
+}

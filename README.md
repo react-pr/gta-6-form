@@ -1,4 +1,5 @@
 # gta-6-form
+### Up with ghcr.io
 **Back-end**
 ```
 docker pull ghcr.io/react-pr/gta-6-back-end:latest
@@ -12,4 +13,9 @@ docker pull ghcr.io/react-pr/gta-6-front-end:latest
 ```
 ```
 docker run -p 5173:5173 ghcr.io/react-pr/gta-6-front-end:latest
+```
+
+### Up with docker-compose
+```
+docker-compose up
 ```

@@ -1,13 +1,15 @@
-FROM node:16-alpine
+FROM node:18-alpine
 
 WORKDIR /app
 
-COPY . .
+COPY package.json .
 
-RUN npm i
+RUN npm i -g pnpm
 
 RUN pnpm i
 
-EXPOSE 3000
+COPY . .
 
-CMD ["pnpm", "run", "dev"]
+EXPOSE 5173
+
+CMD [ "pnpm", "run", "dev" ]
